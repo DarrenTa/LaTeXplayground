@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\title{Example \LaTeX document}
+\author{Darren Tapp}
+\date{\today}
+\newcommand{\RR}{{\mathbb R}}
+
+\begin{document}
+\maketitle
+\LaTeX\  is a markup language that is intended to produce beautiful
+mathematics.  We can display an equation;
+\[
+x+3 = 5.
+\]
+or mathematics could be in line as $x=2$.
+
+\textbackslash\ usually preceeds a command.  \$ is also a special symbol that
+denotes math mode.  One dollar sign for $\sum_{i=1}^n i$ if you want
+the text inline.  Two dollar signs if you want to display
+$$
+\frac{\partial \psi }{\partial t}
+$$
+However I prefer \textbackslash [ and \textbackslash ] to display equations.
+
+Do you want to define a linear map $L:{\mathbb R}^2\to {\mathbb R}^3$?  We could
+could let $L$ be an embedding of ${\mathbb R}^2$ into ${\mathbb R}^3$.
+\[
+(x,y) \mapsto (x,y,0)
+\]
+Note I get tired of typing \verb|{\mathbb R}| so I defined a macro above.  I
+now can type about $\RR$ all day long.
+
+For some reason I would like to give an example of a matrix.
+
+\[
+\begin{bmatrix}
+1& 1& 0 \\
+0& 1 & 2 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 \\
+2 \\
+3
+\end{bmatrix}
+=
+\begin{bmatrix}
+3 \\
+8 \\
+3
+\end{bmatrix}
+\]
+This document uses two packages with the \verb|\usepackage| declaration above.
+\verb|amssymb| is used for the blackboard bold $\RR$.  \verb|amsmath| is used
+to make the matrices easier to type.
+
+
+
+\end{document}
